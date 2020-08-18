@@ -1,0 +1,29 @@
+.card {
+    width: 90%;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.innerCard {
+    height: 600px;
+    border: 1px solid #bebebe;
+    overflow-y: scroll;
+}
+
+.creator {
+    padding: 20px;
+}
+
+@media screen and (min-width: 1280px) {
+    .card {
+        width: 30%;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

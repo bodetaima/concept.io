@@ -1,0 +1,13 @@
+button:focus {
+    outline: none;
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+}
+
+html {
+    background-color: #F2F4FF;
+}
+
+
