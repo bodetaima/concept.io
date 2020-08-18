@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  web:
+    build: ./concept.io-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - network.concept.io
+    container_name: concept.io
+  api:
+    build: ./concept.io-backend
+    restart: on-failure
+    ports:
+      - "5328:5328"
+    depends_on:
+      - db
+    networks:
+      - network.concept.io
+    container_name: api.concept.io
+  db:
+    image: mongo
+    restart: on-failure
+    networks:
+      - network.concept.io
+    container_name: db.concept.io
+networks:
+  network.concept.io:
+    driver: bridge
